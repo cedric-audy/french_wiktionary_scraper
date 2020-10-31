@@ -17,10 +17,13 @@ for w in range(i):
     try:
         word_and_def = parser.fetch(word,'français')
         #print(word_and_def)
-        test = word_and_def[0].get('definitions')[1].get('text')[1]
-        test_ety = word_and_def[0].get('etymology')
-        print(test_ety)
+        word_definition = word_and_def[0].get('definitions')[1].get('text')[1]
+        word_etymology = word_and_def[0].get('etymology')
+        print(word + " : " + word_definition)
         print()
+        print("étymologie : " + word_etymology)
+        print()
+        print('___________________')
         '''  defline = word + " & " + test
         defline = defline.lower()
         defline.replace('&', 'amp')
