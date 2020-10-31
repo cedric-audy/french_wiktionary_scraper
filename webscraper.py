@@ -1,4 +1,4 @@
-from WiktionaryParser.wiktionaryparser import WiktionaryParser
+from wiktionaryparser import WiktionaryParser as wp
 import sys
 import random
 
@@ -9,7 +9,7 @@ word_file = open(path_list, 'r', encoding="utf-8")
 defined_words = open(path_defs, 'w+',encoding="utf-8")
 word_arr = word_file.read().splitlines()
 
-parser = WiktionaryParser()
+parser = wp()
 i = 1000
 entries = []
 for w in range(i):
